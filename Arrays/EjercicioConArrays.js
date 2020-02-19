@@ -1,13 +1,19 @@
-'use strict'
-
-/*  Desarrollar un programa que:
+/*
+{************************************}
+    Programa:       Ejercicios con arreglos
+    Autor:          Villalobos Valenzuela Jesús Héctor
+    Fecha:          17/02/2020
+    Versión:        1.0
+    Descripción:    
     1)  Pida 6 números por pantalla y los meta en un array.
-    2)  Mostrar el array entero (todos los ementos) en el cuerpo de la página y en la
-        consola.
+    2)  Mostrar el array entero (todos los ementos) en el 
+        cuerpo de la página y en la consola.
     3)  Ordenar el array y mostrarlo.
     4)  Invertir su orden y mostrarlo.
     5)  Mostrar cuantos elementos tiene el array.
+{************************************}
 */
+'use strict'
 
 var Numbers = [];
 var Sortnumbers = [];
@@ -26,25 +32,62 @@ InvertArray(Numbers, Invertnumbers);
 document.write(`<p>Array invertido: ${Invertnumbers}</p>`);
 document.write(`<p>Elementos del array: ${Invertnumbers.length}</p>`);
 
-//  1)
+/*
+{************************************}
+    Función:    Pide número al usuario.             
+    Autor:      Villalobos Valenzuela Jesús Héctor
+    Fecha:      17/02/2020
+    Versión:    1.0
+    Descripción:
+        Método que le pide al usuario números y los ingresa
+        a un arreglo.
+{************************************}
+*/
 function AskNumbers(Numbers, Nelements) {
     for (let index = 0; index < Nelements; index++) {
         Numbers.push(parseInt(prompt("Ingresa un número,", 0)));
     }
 }
 
-//  2)
+/*
+{************************************}
+    Función:    Imprime el arreglo.             
+    Autor:      Villalobos Valenzuela Jesús Héctor
+    Fecha:      17/02/2020
+    Versión:    1.0
+    Descripción:
+        Método que imprime el contenido del arreglo.
+{************************************}
+*/
 function PrintArray(string) {
     console.log(string);
     document.write(string);
 }
 
-//  3)
+/*
+{************************************}
+    Función:    Ordena el arreglo.             
+    Autor:      Villalobos Valenzuela Jesús Héctor
+    Fecha:      17/02/2020
+    Versión:    1.0
+    Descripción:
+        Método que ordena el arreglo de manera ascendente.
+{************************************}
+*/
 function SortArray(array, array2) {
     array2.push(array.sort()); 
 }
 
-//  4)
+/*
+{************************************}
+    Función:    Invierte el ordén del arreglo.           
+    Autor:      Villalobos Valenzuela Jesús Héctor
+    Fecha:      17/02/2020
+    Versión:    1.0
+    Descripción:
+        Método invierte el ordén de los elementos del arreglo.
+{************************************}
+*/
 function InvertArray(array, array2) {
     array2.push(array.reverse());
 }
