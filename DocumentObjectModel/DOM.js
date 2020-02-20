@@ -8,10 +8,7 @@
 
 
 ModificarPropiedadesDiv("MiCaja");
-
-
-
-
+ObtieneDivs();
 
 /*
 {************************************}
@@ -38,4 +35,18 @@ function ModificarPropiedadesDiv(NombreDiv) {
 
     
     console.log(Caja);
+}
+
+/*
+{************************************}
+    Función:        ObtieneDivs             
+    Autor:          Villalobos Valenzuela Jesus Hector
+    Fecha:          19/02/2020
+    Descripción:    Conseguir elementos por sus etiquetas.
+{************************************}
+*/
+function ObtieneDivs() {
+    var TodosLosDivs = document.getElementsByTagName('div');
+    TodosLosDivs[1].innerHTML.style.background("pink");
+    console.log(TodosLosDivs);
 }
