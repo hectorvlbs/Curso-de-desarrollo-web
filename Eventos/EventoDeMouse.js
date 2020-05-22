@@ -23,8 +23,9 @@ Boton.addEventListener('mouseout',function() {
 Boton.addEventListener('click', function() {
     CambiaColorBoton();
 })
+
 function CambiaColorBoton() {
-    console.log("a");
+    //  console.log("a");
     var bg = Boton.style.background;
     if (bg == "pink") {
         Boton.style.background = "green";
