@@ -1,0 +1,355 @@
+:root {
+    --background-color:	#d0edf5;
+    --eye-color: #249151;
+    --cat-body-color: #F8AF46;
+    --box-brown-color: #AD8564;
+    --box-shadow-color: #8C6D54;
+    --head-detail-color: #EA8D1C;
+    --h4-color : 	#5a504f;
+  }
+  
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+  
+  body{
+    background: var(--background-color);
+  }
+  
+  html {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 18px;
+  }
+  
+  .Form{
+    width: 90%;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+      background: var(--background-color);
+  }
+
+  .box-canvas{
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    width: 600px;
+    height:600px;
+    background: var(--background-color);
+  }
+  
+  /* Main box */
+  .box {
+    position: absolute;
+    top: 300px;
+    left: 150px;
+    width: 300px;
+    height: 125px;
+    background: var(--box-brown-color);
+    border: 2px solid var(--box-shadow-color);
+    border-top: none;
+  }
+  
+  /* Wide flap at top of box */
+  .box::before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    left: 4px;
+    width: 300px;
+    height: 75px;
+    background: var(--box-brown-color);
+    transform: skew(-10deg, 0deg);
+    border:2px solid var(--box-shadow-color);
+  }
+  
+  /* Fakey amazon swoop */
+  .box::after {
+    content: '';
+    position:absolute;
+    bottom: 20px;
+    left: 60px;
+    border-top: 12px solid black;
+    border-radius: 50%;
+    width: 200px;
+    height: 50px;
+  }
+  
+  /* Main body */
+  .body {
+    position: absolute;
+    left: 145px;
+    top: 140px;
+    background: var(--cat-body-color);
+    width: 320px;
+    height: 190px;
+    border-radius: 50% 35% 35% 35%;
+    transform: skew(0deg, -7deg);
+  }
+  
+  /* Left box flap */
+  .body::before {
+    content: '';
+    position: absolute;
+    bottom: 35px;
+    left: -15px;
+    background: var(--box-brown-color);
+    width: 10px;
+    height: 75px;
+    border-bottom: 2px solid black;
+    transform: rotate(-30deg);
+    border:2px solid var(--box-shadow-color);
+  }
+  
+  /* Right box flap */
+  .body::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    bottom: 5px;
+    background: var(--box-brown-color);
+    width: 10px;
+    height: 75px;
+    border-bottom: 2px solid black;
+    transform: rotate(30deg);
+    border:2px solid var(--box-shadow-color);
+  }
+  
+  /* Main head shape */
+  .head {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 120px;
+    top: 60px;
+    background: var(--cat-body-color);
+    border-radius: 35% 35% 50% 50%;
+    box-shadow: 0px 3px 0px 0px var(--head-detail-color);
+  }
+  
+  /* Left ear */
+  .head::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    background: var(--cat-body-color);
+    top: -45px;
+    left: -15px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(-25deg);
+  }
+  
+  /* Right ear */
+  .head::after {
+    content: '';
+    position: absolute;
+    top: -35px;
+    right: -25px;
+    width: 60px;
+    height: 70px;
+    background: var(--cat-body-color);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform: rotate(45deg);
+  }
+  
+  /* Shared eye styles - black background */
+  .eye {
+    position: absolute;
+    top: 45px;
+    border-radius: 50%;
+    width: 12px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+  }
+  
+  .left-eye {
+    left: 40px;
+    transform: rotate(-15deg);
+  }
+  
+  .right-eye {
+    right: 40px;
+    transform: rotate(15deg);
+  }
+  
+  /* Shared eye pupil styles */
+  .eye::after {
+    content: '';
+    position: absolute;
+    background: white;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    bottom: 5px;
+    left: 3px;
+  }
+  
+  /* Vertical line from nose to mouth */
+  .nose-line {
+    position: absolute;
+    left: 73px;
+    top: 90px;
+    width: 3px;
+    height: 15px;
+    background: black;
+  }
+  
+  /* The nose */
+  .nose-line::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -9px;
+    background: #D1759C;
+    width: 20px;
+    height: 15px;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    border-radius: 25%;
+  }
+  
+  /* Upturned triangle mouth */
+  .nose-line::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: -7px;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+  }
+  
+  /* Shared middle whisker styles */
+  .whisker {
+    position: absolute;
+    top: 95px;
+    background: var(--head-detail-color);
+    width: 70px;
+  }
+  
+  .whisker-left {
+    left: -20px;
+    height: 3px;
+  }
+  
+  .whisker-right {
+    height: 3px;
+    right: -20px;
+  }
+  
+  /* Shared top whisker styles */
+  .whisker::after {
+    content: '';
+    position: absolute;
+    background: var(--head-detail-color);
+    width: 70px;
+    top: -10px;
+  }
+  
+  .whisker-left::after {
+    height: 3px;
+    left: -10px;
+  }
+  
+  .whisker-right::after {
+    height: 3px;
+    right: -10px;
+  }
+  
+  /* Shared bottom whisker styles */
+  .whisker::before {
+    content: '';
+    position: absolute;
+    background: var(--head-detail-color);
+    width: 70px;
+    top: 10px;
+  }
+  
+  .whisker-left::before {
+    height: 3px;
+    left: -10px;
+  }
+  
+  .whisker-right::before {
+    height: 3px;
+    right: -10px;
+  }
+  
+  /* Shared box arrow styles */
+  .arrow {
+    position: absolute;
+    width: 5px;
+    height: 20px;
+    background: black;
+    bottom: 190px;
+  }
+  
+  .arrow-left {
+    left: 165px;
+  }
+  
+  .arrow-right {
+    left: 180px;
+  }
+  
+  /* Points of the box arrows */
+  .arrow::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: -5.5px;
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid black;
+  }
+  
+  /* Arrow head of the fakey box logo */
+  .arrow-right::before {
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: 20px;
+    width: 25px;
+    height: 25px;
+    border-left: 7px solid black;
+    border-top: 7px solid black;
+    border-radius: 30%;
+    transform: rotate(-90deg);
+  }
+
+  h4 {
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #5a504f;
+    color: var(--h4-color);
+  }
+  
+  .Class_Nombre_label{
+    color: var(--h4-color);
+    font-size: 22px;
+    width: max-content  ;
+  }
+
+  .Class_Nombre_input{
+     position: -ms-page;
+  }
+  
+  .Nombre{
+    /* IMPORTANTE */
+    width: 200px;
+    margin: 0 auto;
+  }

@@ -1,0 +1,92 @@
+/* IMPORTANTE */
+form {
+    display: grid;
+    padding: 1em;
+    background:  #5a504f;
+    border: 1px solid #5a504f;
+    margin: 2rem auto 0 auto;
+    max-width: 600px;
+    padding: 1em;
+  }
+
+  .dashed{
+    display: grid;
+    padding: 1em;
+    background:  #5a504f;
+    border: 1px solid #F8AF46;
+    margin: 2rem auto 0 auto;
+    max-width: 600px;
+    padding: 1em;
+  }
+
+  form input {
+    background: #fff;
+    border: 1px solid #9c9c9c;
+  }
+  form button {
+    background: lightgrey;
+    padding: 0.7em;
+    width: 100%;
+    border: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+  form button:hover {
+    background: #F8AF46;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  label {
+    color: #fff;
+    padding: 0.5em 0.5em 0.5em 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  p{
+    color: #fff;
+    text-align: center;
+  }
+
+  .first-name-user{
+    color: #F8AF46;
+    padding: 0.5em 0.5em 0.5em 0;
+  }
+
+  .last-name-user{
+    color: #F8AF46;
+    padding: 0.5em 0.5em 0.5em 0;
+  }
+
+  .age-user{
+    color: #F8AF46;
+    padding: 0.5em 0.5em 0.5em 0;
+  }
+
+  input {
+    padding: 0.7em;
+    margin-bottom: 0.5rem;
+  }
+  input:focus {
+    outline: 3px solid gold;
+  }
+  
+  @media (min-width: 600px) {
+    form {
+      grid-template-columns: 140px 1fr;
+      grid-gap: 1px;
+    }
+  
+    label {
+      text-align: right;
+      grid-column: 1;
+    }
+  
+    input,
+    button {
+      grid-column: 2 / 3;
+    }
+  }
+
+  h5 {
+    text-align: center;
+    color: var(--h4-color);
+  }
