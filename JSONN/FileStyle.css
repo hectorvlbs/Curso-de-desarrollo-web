@@ -1,0 +1,46 @@
+:root {
+    --background-color: #1a191e;
+    --head-color: #5a5050;
+    --text-color : ivory;
+    --border-color: ivory;
+}
+
+.head{
+    background: var(--head-color);
+    margin: 2rem auto 0 auto;
+    border: 1px solid var(--border-color);
+    padding: 1em;
+}
+
+.tittle_head{
+    text-align: center;
+    color: var(--text-color);
+}
+
+body {
+    background: var(--background-color);
+
+}
+
+html {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 18px;
+}
+
+h3{
+    color: var(--text-color);
+    text-align: center;
+}
+
+p{
+    color: var(--text-color);
+    text-align: center;
+    font-family: fantasy;
+}
+
+div{
+    color: var(--text-color);
+    text-align: center;
+    font-family: fantasy; 
+}
