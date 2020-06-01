@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+}
+
+#ID_Box{
+    width: 300px;
+    height: 50px;
+    border: 2px dashed black;
+    background: coral;
+    text-align: center;
+    font: initial;
+    line-height: 50px;
+    color: azure;
+    font-size: 19px;
+    font-family: fantasy;
+    margin-top: 20px;
+}
+

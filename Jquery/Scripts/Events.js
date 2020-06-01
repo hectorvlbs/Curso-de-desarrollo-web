@@ -56,6 +56,7 @@ window.addEventListener("load", () => {
     Document.mousemove(function (e) { 
         // values: e.clientX, e.clientY, e.pageX, e.pageY
         //console.log("Coordenadas en el plano (x,y) -> (" + e.clientX +", " + e.clientY +")");
+
         $("#ID_Followme")
         .css("left", e.clientX)
         .css("top", e.clientY);
