@@ -1,0 +1,51 @@
+:root {
+    --background-color:	rgb(252, 190, 200);
+    --font-famaly-fantasy: fantasy;
+    --selecting: rgb(63, 55, 61);
+    --selected: rgb(220, 147, 214);
+    --border: rgb(119, 104, 104);
+    --border2: rgb(184, 41, 144);
+}
+
+.Class_Element{
+    width: 150px;
+    height: 100px;
+    border: 2px solid var(--border);
+    background: var(--background-color);
+    margin: 20px;
+    float: left;
+    text-align: center;
+    font-family: var(--font-famaly-fantasy);
+}
+
+.Class_ListSelectable li{
+        width: 50px;
+        padding: 20px;
+        border: 4px solid;
+        text-align: center;
+        font-family: var(--font-famaly-fantasy);
+        list-style: none;
+        cursor: pointer;
+        background: var(--background-color);
+}
+
+ul .ui-selecting{
+    background: var(--selecting);
+    color: white;
+}
+
+ul .ui-selected{
+    background: var(--selected);
+}
+
+#ID_Element_Moved{
+    width: 100px;
+    height: 100px;
+    border: 4px solid var(--border);
+}
+
+#ID_Area{
+    width: 300px;
+    height: 300px;
+    border: 4px solid var(--border2);
+}
