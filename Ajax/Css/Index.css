@@ -1,0 +1,6 @@
+div{
+    border: 2px solid pink;
+    width: 250px;
+    height: 250px;
+    overflow: scroll;
+}
