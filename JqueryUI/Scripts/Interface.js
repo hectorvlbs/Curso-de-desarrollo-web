@@ -20,6 +20,12 @@ window.addEventListener("load", () => {
         }
     });
 
+    //  Efectos
+    $("#ID_Show").click(function (e) { 
+        e.preventDefault();
+        $('.Class_Efects_Box').toggle("fold");
+    });
+
     function ConsoleLog(Console) {
         return console.log(Console)
     }
